@@ -1,23 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;200;300;400;500;600;700;800;900&family=Cairo:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Cairo", sans-serif;
+}
+nav ul {
+  display: flex;
+  background-color: blanchedalmond;
+  margin-block-start: 0;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-nav ul {
-    display: flex;
-    background-color: blanchedalmond;
-    margin-block-start: 0;
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  nav ul li {
-    list-style: none;
-    margin-right: 16px;
-  }
-  
-  nav ul li a{
-    color: red;
-    text-decoration: none;
-  }
+nav ul li {
+  list-style: none;
+  margin-right: 16px;
+}
+
+nav ul li a {
+  color: red;
+  text-decoration: none;
+}

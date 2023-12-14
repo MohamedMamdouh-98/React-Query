@@ -1,32 +1,9 @@
-import React from "react";
-import { useQuery } from "react-query";
-import axios from "axios";
+import React from 'react'
 
-const RQSuperHeroesPage = () => {
-  const { isLoading, data, isError, error, isFetching } = useQuery(
-    "super-heroes",
-    () => {
-      return axios.get("http://localhost:3009/superheroes");
-    },
-    { refetchOnMount: true, refetchOnWindowFocus: "always" }
-  );
-
-  console.log({ isLoading, isFetching });
-
-  if (isLoading) {
-    return <h2>Loading...</h2>;
-  }
-  if (isError) {
-    return <h2>{error.message}</h2>;
-  }
+const RQSuperHeroes = () => {
   return (
-    <>
-      <h2>RQSuperHeroesPage</h2>
-      {data?.data.map((hero) => {
-        return <div key={hero.name}>{hero.name}</div>;
-      })}
-    </>
-  );
-};
+    <div>RQSuperHeroes.page</div>
+  )
+}
 
-export default RQSuperHeroesPage;
+export default RQSuperHeroes
