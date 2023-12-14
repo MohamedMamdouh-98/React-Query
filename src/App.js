@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/super-heroes" element={<SuperHeroes />} />
         <Route path="*" element={<Home />} />
       </Routes>
-      <ReactQueryDevtools initialIsOpen={false}/>
+      <ReactQueryDevtools initialIsOpen={false} position="bottom-right"/>
     </>
   );
 };
