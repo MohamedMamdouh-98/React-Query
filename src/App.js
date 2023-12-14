@@ -4,6 +4,8 @@ import "./index.css";
 import Home from "./components/Home";
 import SuperHeroes from "./components/SuperHeroes";
 import RQSuperHeroes from "./components/RQSuperHeroes";
+//Devtools React Query
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 const App = () => {
   return (
@@ -27,6 +29,7 @@ const App = () => {
         <Route path="/super-heroes" element={<SuperHeroes />} />
         <Route path="*" element={<Home />} />
       </Routes>
+      <ReactQueryDevtools initialIsOpen={false}/>
     </>
   );
 };
