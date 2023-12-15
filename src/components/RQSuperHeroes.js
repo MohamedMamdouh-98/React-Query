@@ -9,7 +9,13 @@ const RQSuperHeroes = () => {
     "super-heroes",
     fetchSuperHeroes,
     {
-      enabled: false
+      // cacheTime: 5000
+      // staleTime: 30000
+      // refetchOnMount: true
+      // refetchOnWindowFocus: true
+      // refetchInterval: 2000,
+      // refetchIntervalInBackground: true
+      enabled: false,
     }
   );
   console.log({ isLoading, isFetching });
@@ -25,7 +31,7 @@ const RQSuperHeroes = () => {
       <h2>RQ Super Heroes</h2>
       <button style={{
         border:"none",
-        background: "red",
+        background: "#ff4154",
         color:"white",
         padding:"10px",
         cursor:"pointer"
