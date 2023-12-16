@@ -7,6 +7,13 @@
 html {
   font-family: "Cairo", sans-serif;
 }
+a{
+  text-decoration: none;
+  color: black;
+}
+.container{
+  padding: 0 20px;
+}
 nav ul {
   display: flex;
   justify-content: center;

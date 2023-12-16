@@ -1,15 +1,17 @@
 import React from "react";
 import { useSuperheroesData } from "../hooks/useSuperheroesData";
+import { Link } from "react-router-dom";
 
 const onSuccess = () => {
   console.log("on Success");
 };
 const onError = (error) => {
-  console.log("ops on Error", error.message)
+  console.log("ops on Error", error.message);
 };
 
 const RQSuperHeroes = () => {
-  const { isLoading, data, isError, error, isFetching, refetch } = useSuperheroesData(onSuccess,onError)
+  const { isLoading, data, isError, error, isFetching, refetch } =
+    useSuperheroesData(onSuccess, onError);
   console.log({ isLoading, isFetching });
   if (isLoading || isFetching) {
     return <h2>Loading...</h2>;
@@ -34,7 +36,9 @@ const RQSuperHeroes = () => {
         show data
       </button>
       {data?.data.map((el) => (
-        <p key={el.id}>{el.name}</p>
+        <div key={el.id}>
+          <Link to={`/rq-super-hero/${el.id}`}>{el.name}</Link>
+        </div>
       ))}
     </>
   );
