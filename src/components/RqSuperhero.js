@@ -14,12 +14,12 @@ const RqSuperhero = () => {
   }
 
   return (
-    <>
+    <div className="container">
       <h2>Hero Details</h2>
       <p>
         {data?.data.name} -- {data?.data.alterEgo}{" "}
       </p>
-    </>
+    </div>
   );
 };
 

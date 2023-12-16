@@ -21,7 +21,7 @@ const RQSuperHeroes = () => {
     return <h2>{error.message}</h2>;
   }
   return (
-    <>
+    <div className="container">
       <h2>RQ Super Heroes</h2>
       <button
         style={{
@@ -40,7 +40,7 @@ const RQSuperHeroes = () => {
           <Link to={`/rq-super-hero/${el.id}`}>{el.name}</Link>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
