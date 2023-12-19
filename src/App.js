@@ -12,6 +12,7 @@ import DynamicParallel from "./components/DynamicParallel";
 import DependentQueries from "./components/DependentQueries";
 import PaginatedQueries from "./components/PaginatedQueries";
 import InfinitedPages from "./components/InfinitedPages";
+import RqPostSuperHeroes from "./components/RqPostSuperHeroes";
 
 const App = () => {
   return (
@@ -33,6 +34,9 @@ const App = () => {
           <li>
             <Link to="/rq-infinited-page">Infinite Page</Link>
           </li>
+          <li>
+            <Link to="/rq-post-super-hero">Post Super Hero</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -45,6 +49,7 @@ const App = () => {
         <Route path="/rq-dependent" element={<DependentQueries email='vishwas@example.com'/>}/>
         <Route path="/rq-paginated" element={<PaginatedQueries />}/>
         <Route path="/rq-infinited-page" element={<InfinitedPages />}/>
+        <Route path="/rq-post-super-hero" element={<RqPostSuperHeroes />}/>
         <Route path="*" element={<Home />} />
       </Routes>
       <ReactQueryDevtools initialIsOpen={false} position="bottom-right"/>
