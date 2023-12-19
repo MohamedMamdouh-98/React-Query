@@ -7,7 +7,10 @@ import {
 const RqPostSuperHeroes = () => {
   const [name, setName] = useState("");
   const [alterEgo, setAlterEgo] = useState("");
-  const { data, isLoading, refetch } = useSuperheroesData();
+  const onSuccess = (data)=> {
+    console.log('data', data)
+  }
+  const { data, isLoading, refetch } = useSuperheroesData(onSuccess);
   const { mutate } = useAddSuperHero();
   const handleAddHero = () => {
     const hero = { name, alterEgo };
